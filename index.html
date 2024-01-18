@@ -11,13 +11,16 @@
 
 <body>
     <header class="container">
-        <nav>
-            <a href="#" class="logo"><img src="assets/icons/logo.png" alt=""></a>
-            <ul class="nav__list">
-                <li>Home</li>
-                <li>Product</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
+        <nav class="text-left flex md:items-center md:justify-between md:flex-row flex-col">
+            <div class="mobile-menu flex justify-between">
+                <a class="max-w-80" href="#" class="logo"><img src="assets/icons/logo.png" alt=""></a>
+                <img class="md:hidden ml-16" src="assets/icons/menu-2-outline 1.svg" alt="">
+            </div>
+            <ul class="nav__list mt-4 md:mt-0 flex flex-col md:flex-row gap-x-14 ">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
         <div class="hero">
