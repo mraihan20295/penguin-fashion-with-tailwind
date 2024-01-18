@@ -10,21 +10,35 @@
 </head>
 
 <body>
-    <header class="container">
-        <nav class="text-left flex md:items-center md:justify-between md:flex-row flex-col">
-            <div class="mobile-menu flex justify-between">
-                <a class="max-w-80" href="#" class="logo"><img src="assets/icons/logo.png" alt=""></a>
-                <img class="md:hidden ml-16" src="assets/icons/menu-2-outline 1.svg" alt="">
-            </div>
-            <ul class="nav__list mt-4 md:mt-0 flex flex-col md:flex-row gap-x-14 ">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
+    <header>
+        <div class="wrapper pt-10">
+            <nav class="text-left flex md:items-center md:justify-between md:flex-row flex-col">
+                <div class="mobile-menu flex justify-between">
+                    <a class="max-w-80" href="#" class="logo"><img src="assets/icons/logo.png" alt=""></a>
+                    <img class="md:hidden ml-16" src="assets/icons/menu-2-outline 1.svg" alt="">
+                </div>
+                <ul class="nav__list mt-4 md:mt-0 md:ml-10 md:w-4/5 flex flex-col md:flex-row gap-x-14 ">
+                    <li class="hover:text-lime-500 md:ml-auto"><a href="#">Home</a></li>
+                    <li class="hover:text-lime-500"><a href="#">Product</a></li>
+                    <li class="hover:text-lime-500"><a href="#">About Us</a></li>
+                    <li class="hover:text-lime-500"><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="hero grid md:grid-flow-col items-center gap-y-11">
+                <div class="md:max-w-md text-center md:text-left">
+                    <h1>
+                        <span class="text-orange-400">Be the Penguins<br></span> of Winter
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing
+                        and typesetting industry.
+                    </p>
 
+                </div>
+                <div>
+                    <img class="m-auto" src="assets/images/model.png" alt="">
+                </div>
+            </div>
         </div>
     </header>
     <main></main>
