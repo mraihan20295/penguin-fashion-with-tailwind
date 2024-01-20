@@ -6,50 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penguin Fashion Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --color-accent: #FABE4C;
+            --color-heading: #363958;
+        }
+
+        *,
+        *::before,
+        *::after {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .section-container {
+            width: min(90%, 1140px);
+            margin-inline: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .section-container {
+                width: 90%;
+            }
+        }
+
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div class="wrapper pt-10">
-            <nav class="text-left flex md:items-center md:justify-between md:flex-row flex-col">
+<body class="text-[#3E3E3E]">
+    <header class="bg-[#FFFBF0] pt-7 pb-28">
+        <div class=" section-container">
+            <nav class=" text-left flex md:items-center md:justify-between md:flex-row flex-col">
                 <div class="mobile-menu flex justify-between">
-                    <a class="max-w-80" href="#" class="logo"><img src="assets/icons/logo.png" alt=""></a>
+                    <a class="max-w-80" href="#"><img src="assets/icons/logo.png" alt=""></a>
                     <img class="md:hidden ml-16" src="assets/icons/menu-2-outline 1.svg" alt="">
                 </div>
-                <ul class="nav__list mt-4 md:mt-0 md:ml-10 md:w-4/5 flex flex-col md:flex-row gap-x-14 ">
-                    <li class="border-b border-solid border-slate-500 md:border-0 py-1 hover:text-lime-500 md:ml-auto">
-                        <a href="#">Home</a>
+                <ul class=" mt-4 md:mt-0 md:ml-10 md:w-4/5 flex flex-col md:flex-row gap-x-14 ">
+                    <li class="border-b border-solid border-slate-500 md:border-0 py-1 md:ml-auto">
+                        <a class="font-medium text-[#3C3C3C] hover:text-[--color-accent] " href="#">Home</a>
                     </li>
-                    <li class="border-b border-solid border-slate-500 md:border-0 py-1 hover:text-lime-500">
-                        <a href="#">Product</a>
+                    <li class="border-b  border-solid border-slate-500 md:border-0 py-1">
+                        <a class="font-medium text-[#3C3C3C] hover:text-[--color-accent] " href="#">Product</a>
                     </li>
-                    <li class="border-b border-solid border-slate-500 md:border-0 py-1 hover:text-lime-500">
-                        <a href="#">About Us</a>
+                    <li class="border-b border-solid border-slate-500 md:border-0 py-1">
+                        <a class="font-medium text-[#3C3C3C] hover:text-[--color-accent] " href="#">About Us</a>
                     </li>
-                    <li class="border-b border-solid border-slate-500 md:border-0 py-1 hover:text-lime-500">
-                        <a href="#">Contact Us</a>
+                    <li class="border-b border-solid border-slate-500 md:border-0 py-1">
+                        <a class="font-medium text-[#3C3C3C] hover:text-[--color-accent] " href="#">Contact Us</a>
                     </li>
                 </ul>
             </nav>
-            <div class="hero mt-14 md:mt-5 grid md:grid-flow-col items-center gap-y-10">
+
+
+            <div id="hero" class=" mt-14 md:mt-5 grid md:grid-cols-2 items-center gap-y-10">
                 <div class="md:max-w-md text-center md:text-left">
-                    <h1>
-                        <span class="text-orange-400">Be the Penguins<br></span> of Winter
+                    <h1 class="font-bebas text-[--color-heading] text-[5rem] leading-[1.1]">
+                        <span class="text-[#FABE4C] font-bebas ">Be the Penguins</span><br> of Winter
                     </h1>
                     <p class="w-10/12 mx-auto md:mx-0">
                         Lorem Ipsum is simply dummy text of the printing
                         and typesetting industry.
                     </p>
-
+                    <a class="bg-gradient-to-t from-[#A4BC46] to-[#85A019] mt-3 block w-max max-[767px]:mx-auto px-8 py-5 rounded-xl font-medium text-white"
+                        href="#">
+                        <img class="inline w-[24px] align-top" src="assets/icons/shopping-cart 1.png" alt=""> BUY
+                        NOW
+                    </a>
                 </div>
                 <div>
-                    <img class="m-auto" src="assets/images/model.png" alt="">
+                    <img class="mx-auto" src="assets/images/model.png" alt="">
                 </div>
             </div>
         </div>
     </header>
-    <main></main>
+    <main class=" section-container mt-12">
+        <!-- Women Jacket -->
+        <section id="women-jacket" class="mb-24">
+            <h2 class="uppercase font-bebas text-5xl text-[--color-heading] mb-5">Women Jacket</h2>
+            <div class="grid gap-y-8 md:grid-cols-2 min-[1140px]:grid-cols-3 md:gap-x-8">
+                <div id="women-jacket-1" class="rounded-[20px] p-5 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.05)]">
+                    <div class="bg-[#F1F1F1] rounded-[20px] p-6">
+                        <img class="mx-auto" src="assets/images/jacket-1.png" alt="">
+                    </div>
+                    <h3 class="mt-4 mb-3 leading-none font-bold text-[--color-heading] text-[1.5rem]">Yellow Coat Jacket
+                    </h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry.
+                    </p>
+                    <div class="flex flex-col gap-y-3 min-[340px]:flex-row justify-between items-center mt-3">
+                        <p class="leading-none font-black text-[2.25rem] text-[--color-accent]">$234</p>
+                        <a class="bg-gradient-to-t from-[#A4BC46] to-[#85A019]  block w-max px-8 py-5 rounded-xl font-medium text-white"
+                            href="#">
+                            <img class="inline w-[24px] align-top" src="assets/icons/shopping-cart 1.png" alt=""> BUY
+                            NOW
+                        </a>
+                    </div>
+                </div>
+                <div id="women-jacket-2" class="rounded-[20px] p-5 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.05)]">
+                    <div class="bg-[#F1F1F1] rounded-[20px] p-6">
+                        <img class="mx-auto" src="assets/images/jacket-2.png" alt="">
+                    </div>
+                    <h3 class="mt-4 mb-3 leading-none font-bold text-[--color-heading] text-[1.5rem]">Yellow Coat Jacket
+                    </h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry.
+                    </p>
+                    <div class="flex flex-col gap-y-3 min-[340px]:flex-row justify-between items-center mt-3">
+                        <p class="leading-none font-black text-[2.25rem] text-[--color-accent]">$234</p>
+                        <a class="bg-gradient-to-t from-[#A4BC46] to-[#85A019]  block w-max px-8 py-5 rounded-xl font-medium text-white"
+                            href="#">
+                            <img class="inline w-[24px] align-top" src="assets/icons/shopping-cart 1.png" alt=""> BUY
+                            NOW
+                        </a>
+                    </div>
+                </div>
+                <div id="women-jacket-3" class="rounded-[20px] p-5 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.05)]">
+                    <div class="bg-[#F1F1F1] rounded-[20px] p-6">
+                        <img class="mx-auto" src="assets/images/jacket-3.png" alt="">
+                    </div>
+                    <h3 class="mt-4 mb-3 leading-none font-bold text-[--color-heading] text-[1.5rem]">Yellow Coat Jacket
+                    </h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry.
+                    </p>
+                    <div class="flex flex-col gap-y-3 min-[340px]:flex-row justify-between items-center mt-3">
+                        <p class="leading-none font-black text-[2.25rem] text-[--color-accent]">$234</p>
+                        <a class="bg-gradient-to-t from-[#A4BC46] to-[#85A019]  block w-max px-8 py-5 rounded-xl font-medium text-white"
+                            href="#">
+                            <img class="inline w-[24px] align-top" src="assets/icons/shopping-cart 1.png" alt=""> BUY
+                            NOW
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
